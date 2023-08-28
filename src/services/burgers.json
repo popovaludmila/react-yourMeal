@@ -1,0 +1,46 @@
+{
+    "burgers": [
+        {
+            "id": "bomba",
+            "name": "Мясная бомба",
+            "price": "689",
+            "weight": "520",
+            "src": "bomba.png"
+        },
+        {
+            "id": "cheese",
+            "name": "Супер сырный",
+            "price": "550",
+            "weight": "512",
+            "src": "cheese.png"
+        },
+        {
+            "id": "hearty",
+            "name": "Сытный",
+            "price": "639",
+            "weight": "580",
+            "src": "hearty.png"
+        },
+        {
+            "id": "blow",
+            "name": "Тяжелый удар",
+            "price": "480",
+            "weight": "470",
+            "src": "blow.png"
+        },
+        {
+            "id": "classic",
+            "name": "Вечная классика",
+            "price": "450",
+            "weight": "450",
+            "src": "classic.png"
+        },
+        {
+            "id": "italian",
+            "name": "Итальянский",
+            "price": "560",
+            "weight": "510",
+            "src": "italian.png"
+        }
+    ]
+}

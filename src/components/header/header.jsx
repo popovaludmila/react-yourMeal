@@ -3,13 +3,13 @@ import logo from "../../images/Logo.svg";
 import yourMeal from "../../images/YourMeal.svg";
 import burger from "../../images/pic.png"
 import headerStyles from './header.module.css';
-import json from "../../services/categories.json"
+import menu from "../../services/categories.json"
 import { useMemo } from "react";
 
 const Header = () => {
 
     const categoriesData = useMemo(
-        () => json.categories.map((item) => {
+        () => menu.categories.map((item) => {
             return <HeaderNav key={item.id} img={item.src} title={item.name}/>
         }), []
     )
@@ -24,9 +24,10 @@ const Header = () => {
                         <img className={headerStyles.logoIcon} src={logo} alt="Логоттип" />
                     </div>
                     <div className={headerStyles.content}>
+                        <h1 className="visually-hidden">Ресторан вкусных бургеров и не только</h1>
                         <img src={burger} alt="Фон из бургера" />
                         <div className={headerStyles.textIntro}>
-                            <h1 className={headerStyles.title}>Только самые <span className={headerStyles.span}>сочные бургеры!</span></h1>
+                            <p className={headerStyles.title}>Только самые <span className={headerStyles.span}>сочные бургеры!</span></p>
                             <p className={headerStyles.text}>Бесплатная доставка от 599₽</p>
                         </div> 
                     </div>
