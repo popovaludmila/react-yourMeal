@@ -9,8 +9,10 @@ export const Card = () => {
                  <h3 className={cardStyles.title}>Корзина</h3>
                  <span className={cardStyles.count}>4</span>
             </div>
-            <div >
-                <ul>
+            <div>
+                <ul className={cardStyles.list}>
+                   <CardItem />
+                   <CardItem />
                    <CardItem />
                 </ul>
                 <div className={cardStyles.price}>

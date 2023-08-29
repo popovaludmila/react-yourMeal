@@ -1,5 +1,5 @@
 .container {
-    min-width: 300px;
+    width: 300px;
     height: auto;
     border-radius: 18px;
     background-color: #fff;
@@ -11,6 +11,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 12px;
 }
 
 .title {
@@ -27,7 +28,7 @@
     padding: 2px 16px;
 }
 
-.content {
+.list {
     border-top: 1px solid #F2F2F3;
     border-bottom: 1px solid #F2F2F3;
 }
