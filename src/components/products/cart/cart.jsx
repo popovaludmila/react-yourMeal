@@ -1,13 +1,12 @@
 import cartStyles from "./cart.module.css";
-import cheeseBurger from "../../../images/burgers/cheese.png";
 
-export const Cart = () => {
+export const Cart = ({image, price, name, weight}) => {
     return (
         <li className={cartStyles.item}>
-            <img src={cheeseBurger} alt=" "width="276" height="220" />
-            <span className={cartStyles.price}>689₽</span>
-            <p className={cartStyles.name}>Мясная бомба</p>
-            <span className={cartStyles.weight}>520г</span>
+            <img src={require(`../../../images/burgers/${image}`)} alt={name} width="276" height="220" />
+            <span className={cartStyles.price}>{price}₽</span>
+            <p className={cartStyles.name}>{name}</p>
+            <span className={cartStyles.weight}>{weight}г</span>
             <button className={cartStyles.btn}>Добавить</button>
         </li>
     )
