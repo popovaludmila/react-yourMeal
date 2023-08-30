@@ -1,0 +1,21 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-left: 30px;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 600;
+    padding-bottom: 24px;
+}

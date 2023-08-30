@@ -45,7 +45,7 @@ a {
 
 button {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: center;
   text-align: center;
   border: 0;
   cursor: pointer;

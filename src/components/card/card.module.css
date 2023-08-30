@@ -1,9 +1,10 @@
 .container {
-    width: 300px;
+    min-width: 300px;
     height: auto;
     border-radius: 18px;
     background-color: #fff;
     padding: 24px 16px;
+    margin-top: 72px;
 }
 
 .title_content {
@@ -17,7 +18,7 @@
 .title {
     font-size: 24px;
     line-height: 24px;
-    font-weight: 600;
+    font-weight: 500;
     color: #000000;
 }
 
