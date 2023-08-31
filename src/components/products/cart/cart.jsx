@@ -1,13 +1,22 @@
+import { useDispatch } from "react-redux";
 import cartStyles from "./cart.module.css";
+import { addProduct } from "../../../store/slices/cartSlice";
 
-export const Cart = ({image, price, name, weight}) => {
+export const Cart = ({product}) => {
+    const {image, price, name, weight} = product;
+    const dispatch = useDispatch();
+
+    const addProductToCart = () => {
+        dispatch(addProduct(product))
+    }
+
     return (
         <li className={cartStyles.item}>
-            <img src={require(`../../../images/burgers/${image}`)} alt={name} width="276" height="220" />
+            <img src={(`${image}`)} alt={name} width="276" height="220" />
             <span className={cartStyles.price}>{price}₽</span>
             <p className={cartStyles.name}>{name}</p>
             <span className={cartStyles.weight}>{weight}г</span>
-            <button className={cartStyles.btn}>Добавить</button>
+            <button onClick={addProductToCart} className={cartStyles.btn}>Добавить</button>
         </li>
     )
 }

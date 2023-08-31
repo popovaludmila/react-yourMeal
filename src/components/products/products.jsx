@@ -3,13 +3,11 @@ import productsStyles from "./products.module.css";
 import products from "../../services/burgers.json";
 
 export const Products = () => {
+    
     const burgers = products.burgers.map((burger) => {
         return <Cart 
             key={burger.id}
-            image={burger.src}
-            name={burger.name}
-            price={burger.price}
-            weight={burger.weight} />
+            product={burger} />
     });
 
     return (
