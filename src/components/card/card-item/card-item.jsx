@@ -7,10 +7,12 @@ export const CardItem = ({item}) => {
     const cardItems = useSelector(state => state.cart.cart);
 
     let count = 0;
+    let priceItem = 0;
 
     cardItems.forEach(cardItem => {
         if(cardItem.id === item.id){
             count++;
+            priceItem = price * count;
         }
     })
     
@@ -20,7 +22,7 @@ export const CardItem = ({item}) => {
             <div className={cardItemStyles.content}>
                 <p>{name}</p>
                 <span className={cardItemStyles.weight}>{weight}г</span>
-                <span>{price}₽</span>
+                <span>{priceItem}₽</span>
             </div>
             <div className={cardItemStyles.btn}>
                 <button className={cardItemStyles.minus}>-</button>               
