@@ -3,7 +3,9 @@ import cartStyles from "./cart.module.css";
 import { addProduct } from "../../../store/slices/cartSlice";
 
 export const Cart = ({product}) => {
-    const {image, price, name, weight} = product;
+
+    const {src, price, name, weight} = product;
+   
     const dispatch = useDispatch();
 
     const addProductToCart = () => {
@@ -12,7 +14,7 @@ export const Cart = ({product}) => {
 
     return (
         <li className={cartStyles.item}>
-            <img src={(`${image}`)} alt={name} width="276" height="220" />
+            <img src={require(`../../../images/burgers/${src}`)} alt={name} width="276" height="220" />
             <span className={cartStyles.price}>{price}₽</span>
             <p className={cartStyles.name}>{name}</p>
             <span className={cartStyles.weight}>{weight}г</span>

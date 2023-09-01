@@ -11,7 +11,9 @@ const App = () => {
       <main>
         <div className="container">
           <div className={appStyles.main}>
-            <Card />
+            <div>
+              <Card />
+            </div>
             <Products />
           </div>
         </div>

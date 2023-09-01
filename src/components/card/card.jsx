@@ -1,15 +1,18 @@
-import { CardItem } from "./card-item/card-item"
 import cardStyles from "./card.module.css";
-import delivery from "../../images/icons/Доставка.svg";
 import { useSelector } from "react-redux";
+import delivery from "../../images/icons/Доставка.svg";
 import { v4 as uuidv4 } from 'uuid';
+import { CardItem } from "./card-item/card-item";
 
 
 export const Card = () => {
 
     const cardItems = useSelector(state => state.cart.cart);
-    
-    const items = cardItems.map((item) => {
+    const totalCount = useSelector(state => state.cart.totalCount);
+
+    const items = Array.from(new Set(cardItems));
+
+    const orderItems = items.map((item) => {
         return  <CardItem key={uuidv4()} item={item}/>
     })
 
@@ -17,13 +20,13 @@ export const Card = () => {
         <div className={cardStyles.container}>
             <div className={cardStyles.title_content}>
                  <h3 className={cardStyles.title}>Корзина</h3>
-                 <span className={cardStyles.count}>4</span>
+                 <span className={cardStyles.count}>{totalCount}</span>
             </div>
 
-            {(cardItems && 
+            {(cardItems.length &&
                 <div>
                     <ul className={cardStyles.list}>
-                        {items}
+                        {orderItems}
                     </ul>
                     <div className={cardStyles.price}>
                         <p>Итого</p>
@@ -34,8 +37,8 @@ export const Card = () => {
                         <img src={delivery} alt="Иконка доставки" width="24" height="24" />
                         <span className={cardStyles.text}>Бесплатная доставка</span>
                     </div>
-                </div>
-            ) || <p>dgdgd</p>}
+                </div> ) || 
+                <p>Тут пока пусто :(</p>}
         </div>
     )
 }
