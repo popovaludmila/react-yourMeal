@@ -8,7 +8,10 @@ import { CardItem } from "./card-item/card-item";
 export const Card = () => {
 
     const cardItems = useSelector(state => state.cart.cart);
-    const totalCount = useSelector(state => state.cart.totalCount);
+    let totalCount = cardItems.length;
+    let totalPrice = 0;
+
+    cardItems.forEach((item) => (totalPrice += Number(item.price)));
 
     const items = Array.from(new Set(cardItems));
 
@@ -30,7 +33,7 @@ export const Card = () => {
                     </ul>
                     <div className={cardStyles.price}>
                         <p>Итого</p>
-                        <span>1200 ₽</span>
+                        <span>{totalPrice} ₽</span>
                     </div>
                     <button className={cardStyles.btn} type="submit">Оформить заказ</button>
                     <div className={cardStyles.note}>
