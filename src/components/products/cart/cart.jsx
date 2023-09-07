@@ -8,26 +8,13 @@ export const Cart = ({product}) => {
     const {src, price, name, weight} = product;
     const btnRef = createRef();
 
-    const activeStyle = {
-        backgroundColor: "#FFAB08",
-        color: "#FFFFFF"
-    };
-
-    const handleOnFocus = () => {
-        btnRef.current.style.backgroundColor = "#F86310";
-        btnRef.current.style.color = "#FFFFFF"; 
-    }
-            
-    const handleOnBlur = () => {
-        btnRef.current.style.backgroundColor = "#F2F2F3";
-        btnRef.current.style.color = "#000";
-    }
-
     const dispatch = useDispatch();
 
     const addProductToCart = () => {
         dispatch(addProduct(product));
         setIsClicked(true);
+        btnRef.current.style.backgroundColor = "#FFAB08";
+        btnRef.current.style.color = "#FFFFFF"; 
     }
 
     return (
@@ -37,12 +24,10 @@ export const Cart = ({product}) => {
             <p className={cartStyles.name}>{name}</p>
             <span className={cartStyles.weight}>{weight}г</span>
             <button 
-                onMouseEnter={handleOnFocus} 
-                onMouseLeave={handleOnBlur} 
                 onClick={addProductToCart} 
                 ref={btnRef} 
                 className={cartStyles.btn}>
-                {!isClicked ? "Добавить" :" Добавлено"}  
+                {!isClicked ? "Добавить" : "В корзине"}  
             </button>
         </li>
     )

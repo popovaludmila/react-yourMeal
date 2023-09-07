@@ -8,14 +8,10 @@ import { CardItem } from "./card-item/card-item";
 export const Card = () => {
 
     const cardItems = useSelector(state => state.cart.cart);
-    let totalCount = cardItems.length;
-    let totalPrice = 0;
+    const totalCount = cardItems.reduce((sum, item) => sum + item.count, 0);
+    const totalPrice = cardItems.reduce((sum, item) => sum + Number(item.price * item.count), 0);
 
-    cardItems.forEach((item) => (totalPrice += Number(item.price)));
-
-    const items = Array.from(new Set(cardItems));
-
-    const orderItems = items.map((item) => {
+    const orderItems = cardItems.map((item) => {
         return  <CardItem key={uuidv4()} item={item}/>
     })
 

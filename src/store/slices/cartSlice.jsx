@@ -9,7 +9,16 @@ const initialState = {
     name: 'cart',
     reducers: {
         addProduct(state, action) {
-           state.cart.push(action.payload)
+            const findItem = state.cart.find(item => item.id === action.payload.id);
+         
+            if(findItem) {
+                findItem.count++;
+            } else {
+                state.cart.push({
+                    ...action.payload,
+                    count: 1
+                });
+            }
         }
     }
 })

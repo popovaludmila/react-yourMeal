@@ -1,28 +1,15 @@
-import { useSelector } from "react-redux";
 import cardItemStyles from "./card-item.module.css";
 
 export const CardItem = ({item}) => {
-    const {src, price, name, weight} = item;
-
-    const cardItems = useSelector(state => state.cart.cart);
-
-    let count = 0;
-    let priceItem = 0;
-
-    cardItems.forEach(cardItem => {
-        if(cardItem.id === item.id){
-            count++;
-            priceItem = price * count;
-        }
-    })
-    
+    const {src, price, name, weight, count} = item;
+ 
     return (
         <li className={cardItemStyles.item}>
             <img className={cardItemStyles.img} src={require(`../../../images/burgers/${src}`)} alt={name} width="64" height="52" />
             <div className={cardItemStyles.content}>
                 <p>{name}</p>
                 <span className={cardItemStyles.weight}>{weight}г</span>
-                <span>{priceItem}₽</span>
+                <span>{price}₽</span>
             </div>
             <div className={cardItemStyles.btn}>
                 <button className={cardItemStyles.minus}>-</button>               
