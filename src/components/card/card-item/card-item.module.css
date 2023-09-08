@@ -45,12 +45,12 @@
 }
 
 .count {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-width: 34px;
     height: 40px;
     border: none;
-    text-align: center;
-    vertical-align: middle;
     background-color: #F2F2F3;
    
 }
@@ -63,6 +63,7 @@
     min-width: 25px;
     height: 40px;
     background-color: #F2F2F3;
+    cursor: pointer;
 }
 
 .minus {

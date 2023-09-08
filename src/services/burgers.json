@@ -5,42 +5,48 @@
             "name": "Мясная бомба",
             "price": "689",
             "weight": "520",
-            "src": "bomba.png"
+            "src": "bomba.png",
+            "inCart": false
         },
         {
             "id": "cheese",
             "name": "Супер сырный",
             "price": "550",
             "weight": "512",
-            "src": "cheese.png"
+            "src": "cheese.png",
+            "inCart": false
         },
         {
             "id": "hearty",
             "name": "Сытный",
             "price": "639",
             "weight": "580",
-            "src": "hearty.png"
+            "src": "hearty.png",
+            "inCart": false
         },
         {
             "id": "blow",
             "name": "Тяжелый удар",
             "price": "480",
             "weight": "470",
-            "src": "blow.png"
+            "src": "blow.png",
+            "inCart": false
         },
         {
             "id": "classic",
             "name": "Вечная классика",
             "price": "450",
             "weight": "450",
-            "src": "classic.png"
+            "src": "classic.png",
+            "inCart": false
         },
         {
             "id": "italian",
             "name": "Итальянский",
             "price": "560",
             "weight": "510",
-            "src": "italian.png"
+            "src": "italian.png",
+            "inCart": false
         }
     ]
 }

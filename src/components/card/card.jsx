@@ -7,7 +7,7 @@ import { CardItem } from "./card-item/card-item";
 
 export const Card = () => {
 
-    const cardItems = useSelector(state => state.cart.cart);
+    const cardItems = useSelector(state => state.cart.card);
     const totalCount = cardItems.reduce((sum, item) => sum + item.count, 0);
     const totalPrice = cardItems.reduce((sum, item) => sum + Number(item.price * item.count), 0);
 
