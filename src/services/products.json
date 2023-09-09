@@ -1,0 +1,103 @@
+{
+    "products": [
+        {
+            "id": "bomba",
+            "name": "Мясная бомба",
+            "price": "689",
+            "weight": "520",
+            "src": "bomba.png",
+            "category": "burger"
+        },
+        {
+            "id": "cheese",
+            "name": "Супер сырный",
+            "price": "550",
+            "weight": "512",
+            "src": "cheese.png",
+            "category": "burger"
+        },
+        {
+            "id": "hearty",
+            "name": "Сытный",
+            "price": "639",
+            "weight": "580",
+            "src": "hearty.png",
+            "category": "burger"
+        },
+        {
+            "id": "blow",
+            "name": "Тяжелый удар",
+            "price": "480",
+            "weight": "470",
+            "src": "blow.png",
+            "category": "burger"
+        },
+        {
+            "id": "classic",
+            "name": "Вечная классика",
+            "price": "450",
+            "weight": "450",
+            "src": "classic.png",
+            "category": "burger"
+        },
+        {
+            "id": "italian",
+            "name": "Итальянский",
+            "price": "560",
+            "weight": "510",
+            "src": "italian.png",
+            "category": "burger"
+        },
+
+
+        {
+            "id": "nachos",
+            "name": "Начос",
+            "price": "250",
+            "weight": "220",
+            "src": "nachos.png",
+            "category": "snack"
+        },
+        {
+            "id": "french",
+            "name": "Картошка фри",
+            "price": "245",
+            "weight": "180",
+            "src": "french.png",
+            "category": "snack"
+        },
+        {
+            "id": "onion",
+            "name": "Луковые кольца",
+            "price": "230",
+            "weight": "160",
+            "src": "onion.png",
+            "category": "snack"
+        },
+
+        {
+            "id": "spicyDog",
+            "name": "Жгучий хот-дог",
+            "price": "239",
+            "weight": "245",
+            "src": "spicy.png",
+            "category": "hot-dog"
+        },
+        {
+            "id": "classicDog",
+            "name": "Классический хот-дог",
+            "price": "220",
+            "weight": "215",
+            "src": "classic.png",
+            "category": "hot-dog"
+        },
+        {
+            "id": "homeDog",
+            "name": "Домашний хот-дог",
+            "price": "290",
+            "weight": "250",
+            "src": "home.png",
+            "category": "hot-dog"
+        }
+    ]
+}
