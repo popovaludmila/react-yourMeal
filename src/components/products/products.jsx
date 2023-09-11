@@ -1,20 +1,28 @@
+import { useSelector } from "react-redux";
 import { Cart } from "./cart/cart";
 import productsStyles from "./products.module.css";
-import products from "../../services/burgers.json";
+import { useMemo } from "react";
 
-export const Products = () => {
-    
-    const burgers = products.burgers.map((burger) => {
+export const Products = ({category}) => {
+    const ingredients = useSelector(state => state.cart.products);
+    console.log(ingredients)
+
+    const products = useMemo(
+        () => ingredients.filter((item) => item.category === category),
+        [ingredients, category]);
+
+    const items = products.map((item) => {
         return <Cart 
-            key={burger.id}
-            product={burger} />
+            key={item.id}
+            product={item} />
     });
+    console.log(products)
 
     return (
         <div className={productsStyles.content}>
             <h2 className={productsStyles.title}>Бургеры</h2>
             <ul className={productsStyles.list}>
-                {burgers}
+                {items}
             </ul>
         </div>
     )
