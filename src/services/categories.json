@@ -3,47 +3,56 @@
         {
             "id": "burger",
             "name": "Бургеры",
-            "src": "Бургер.svg"
+            "src": "Бургер.svg",
+            "href": "/"
         },
         {
             "id": "snack",
             "name": "Закуски",
-            "src": "Закуски.svg"
+            "src": "Закуски.svg",
+            "href": "snacks"
         },
         {
             "id": "hotDog",
             "name": "Хот-доги",
-            "src": "Хотдоги.svg"
+            "src": "Хотдоги.svg",
+            "href": "hot_dogs"
         },
         {
             "id": "combo",
             "name": "Комбо",
-            "src": "Комбо.svg"
+            "src": "Комбо.svg",
+            "href": "combos"
         },
         {
             "id": "shawarma",
             "name": "Шаурма",
-            "src": "Шаурма.svg"
+            "src": "Шаурма.svg",
+            "href": "shawarmas"
         },
         {
             "id": "pizza",
             "name": "Пицца",
-            "src": "Пицца.svg"
+            "src": "Пицца.svg",
+            "href": "pizzas"
         },
         {
             "id": "wok",
             "name": "Вок",
-            "src": "Вок.svg"
+            "src": "Вок.svg",
+            "href": "woks"
         },
         {
             "id": "dessert",
             "name": "Десерты",
-            "src": "Десерты.svg"
+            "src": "Десерты.svg",
+            "href": "desserts"
         },
         {
             "id": "sauce",
             "name": "Соусы",
-            "src": "Соусы.svg"
+            "src": "Соусы.svg",
+            "href": "sauces"
         }
     ]
 }

@@ -84,11 +84,11 @@
             "category": "hot-dog"
         },
         {
-            "id": "classicDog",
+            "id": "originalDog",
             "name": "Классический хот-дог",
             "price": "220",
             "weight": "215",
-            "src": "classic.png",
+            "src": "original.png",
             "category": "hot-dog"
         },
         {

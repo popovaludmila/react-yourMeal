@@ -12,7 +12,7 @@ export const Card = () => {
     const totalPrice = cardItems.reduce((sum, item) => sum + Number(item.price * item.count), 0);
 
     const orderItems = cardItems.map((item) => {
-        return  <CardItem key={uuidv4()} item={item}/>
+        return  <CardItem key={uuidv4()} item={item} imgHref={item.href}/>
     })
 
     return (

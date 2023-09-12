@@ -5,7 +5,6 @@ import { useMemo } from "react";
 
 export const Products = ({category}) => {
     const ingredients = useSelector(state => state.cart.products);
-    console.log(ingredients)
 
     const products = useMemo(
         () => ingredients.filter((item) => item.category === category),
@@ -14,9 +13,9 @@ export const Products = ({category}) => {
     const items = products.map((item) => {
         return <Cart 
             key={item.id}
-            product={item} />
+            product={item}     
+            imgHref={category} />
     });
-    console.log(products)
 
     return (
         <div className={productsStyles.content}>

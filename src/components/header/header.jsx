@@ -10,10 +10,9 @@ const Header = () => {
 
     const categoriesData = useMemo(
         () => menu.categories.map((item) => {
-            return <HeaderNav key={item.id} img={item.src} title={item.name}/>
+            return <HeaderNav key={item.id} img={item.src} title={item.name} link={item.href} />
         }), []
     )
-
     return (
       <header>
         <div className={headerStyles.header}>

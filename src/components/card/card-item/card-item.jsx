@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import cardItemStyles from "./card-item.module.css";
 import { addItem, decreaseItem, deleteItem } from "../../../store/slices/cartSlice";
 
-export const CardItem = ({item}) => {
+export const CardItem = ({item, imgHref}) => {
     const {src, price, name, weight, count} = item;
     const dispatch = useDispatch();
 
@@ -21,7 +21,7 @@ export const CardItem = ({item}) => {
 
     return (
         <li className={cardItemStyles.item}>
-            <img className={cardItemStyles.img} src={require(`../../../images/burgers/${src}`)} alt={name} width="64" height="52" />
+            <img className={cardItemStyles.img} src={require(`../../../images/${imgHref}s/${src}`)} alt={name} width="64" height="52" />
             <div className={cardItemStyles.content}>
                 <p>{name}</p>
                 <span className={cardItemStyles.weight}>{weight}г</span>
