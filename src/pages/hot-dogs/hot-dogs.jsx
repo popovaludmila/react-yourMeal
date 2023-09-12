@@ -3,7 +3,7 @@ import { Products } from "../../components/products/products";
 export const HotDogsPage = () => {
   return (
     <>
-      <Products category="hot-dog" />
+      <Products category="hot-dog" title="Хот-доги" />
     </>
   )
 }

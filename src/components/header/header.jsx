@@ -7,7 +7,7 @@ import menu from "../../services/categories.json"
 import { useMemo } from "react";
 
 const Header = () => {
-
+  
     const categoriesData = useMemo(
         () => menu.categories.map((item) => {
             return <HeaderNav key={item.id} img={item.src} title={item.name} link={item.href} />

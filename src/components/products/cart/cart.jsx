@@ -1,34 +1,30 @@
-import { useDispatch} from "react-redux";
+import { useDispatch, useSelector} from "react-redux";
 import cartStyles from "./cart.module.css";
 import { addItem} from "../../../store/slices/cartSlice";
-import { createRef } from "react";
 
-export const Cart = ({product, imgHref}) => {
-    const {src, price, name, weight} = product;
-    let {inCart} = product;
+export const Cart = ({product}) => {
+    const {id, src, price, name, weight, category} = product;
+   
+    const card = useSelector(state => state.cart.card);
 
-    const btnRef = createRef();
-
+    const item = card.find(item => item.id === id);
     const dispatch = useDispatch();
 
     const addProductToCart = () => {
-        dispatch(addItem(product));
-        btnRef.current.style.backgroundColor = "#FFAB08";
-        btnRef.current.style.color = "#FFFFFF"; 
+        dispatch(addItem(product));       
     }
 
     return (
         <li className={cartStyles.item}>
-            <img src={require(`../../../images/${imgHref}s/${src}`)} alt={name} width="276" height="220" />
+            <img src={require(`../../../images/${category}s/${src}`)} alt={name} width="276" height="220" />
             <span className={cartStyles.price}>{price}₽</span>
             <p className={cartStyles.name}>{name}</p>
             <span className={cartStyles.weight}>{weight}г</span>
-            <button 
-                onClick={addProductToCart} 
-                ref={btnRef} 
-                className={cartStyles.btn}>
-                {inCart ? "Добавить" : "В корзине"}  
-            </button>
+            
+            {item ? 
+                <button onClick={addProductToCart} className={cartStyles.btn} style={ {color: "#FFF", backgroundColor: "#FFAB08"}}>В корзине</button> : 
+                <button onClick={addProductToCart} className={cartStyles.btn}>Добавить</button>
+            }
         </li>
     )
 }

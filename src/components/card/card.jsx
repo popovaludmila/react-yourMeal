@@ -10,9 +10,10 @@ export const Card = () => {
     const cardItems = useSelector(state => state.cart.card);
     const totalCount = cardItems.reduce((sum, item) => sum + item.count, 0);
     const totalPrice = cardItems.reduce((sum, item) => sum + Number(item.price * item.count), 0);
-
+    
     const orderItems = cardItems.map((item) => {
-        return  <CardItem key={uuidv4()} item={item} imgHref={item.href}/>
+        return  <CardItem key={uuidv4()} item={item}/>
+        
     })
 
     return (

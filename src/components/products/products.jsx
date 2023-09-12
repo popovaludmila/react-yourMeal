@@ -3,7 +3,7 @@ import { Cart } from "./cart/cart";
 import productsStyles from "./products.module.css";
 import { useMemo } from "react";
 
-export const Products = ({category}) => {
+export const Products = ({category, title}) => {
     const ingredients = useSelector(state => state.cart.products);
 
     const products = useMemo(
@@ -13,13 +13,12 @@ export const Products = ({category}) => {
     const items = products.map((item) => {
         return <Cart 
             key={item.id}
-            product={item}     
-            imgHref={category} />
+            product={item} />
     });
 
     return (
         <div className={productsStyles.content}>
-            <h2 className={productsStyles.title}>Бургеры</h2>
+            <h2 className={productsStyles.title}>{title}</h2>
             <ul className={productsStyles.list}>
                 {items}
             </ul>
