@@ -1,0 +1,62 @@
+.footer {
+    background-color: #fff;
+}
+
+.contacts {
+    display: flex;
+    padding-top: 52px;
+    padding-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.logo_text {
+    margin-right: 8px;
+}
+
+.tel {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 126px;
+}
+
+.text {
+    font-size: 24px;
+    line-height: 24px;
+    padding-bottom: 24px;
+    font-weight: 400;
+}
+
+.number {
+    margin-left: 4px;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.phone {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.social_item {
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+}
+.author {
+    padding-top: 4px;
+}

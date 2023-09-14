@@ -27,3 +27,8 @@
     background-color: #FFAB08;
     border-color: #FFAB08;
 }
+
+.active:hover,
+.active:focus {
+    border-color: #FFAB08;
+}
