@@ -3,17 +3,27 @@
     flex-direction: row;
     align-items: center;
     background-color: #fff;
+    border: 2px solid #fff;
     border-radius: 50px;
-    padding: 9px 14px;
+    padding: 7px 12px;
     margin-right: 24px;
     font-size: 16px;
     line-height: 22px;
     cursor: pointer;
+    transition: .1s linear;
 }
+
+.item:hover,
+.item:focus {
+    border: 2px solid #FF7020;
+
+}
+
 .link {
     padding-left: 8px;
 }
 
 .active {
     background-color: #FFAB08;
+    border-color: #FFAB08;
 }
